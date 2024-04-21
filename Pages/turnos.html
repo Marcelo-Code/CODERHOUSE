@@ -1,50 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../CSS/estilos.css">
+    <link rel="stylesheet" href="../SCSS/estilos.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <title>Turnos</title>
 </head>
+
 <body>
     <header class="encabezado">
-        <div class="encabezado__imagen"><a href="../index.html"><img class="encabezado__logo" src="../Assets/logo.png" alt="" ></a></div>
-        <span class="encabezado__texto_logo">
+        <div class="encabezado__imagen animate__shakeX">
+            <a href="../index.html"><img class="encabezado__logo" src="../Assets/logo.png" alt=""></a>
+        </div>
+        <span class="encabezado__texto_logo animate__backInDown">
             <div>Espacio Lupsa</div>
             <div>Consultorios Multidisciplinarios</div>
         </span>
-        <nav class="encabezado__navegacion">
-            <ul>
-                <li><a href="../index.html">Home |</a></li>
-                <li><a href="#">Turnos |</a></li>
-                <li><a href="./institucional.html">Institucional |</a></li>
-                <li><a href="./staff.html">Staff |</a></li>
-                <li><a href="./info.html">Info |</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+
+        <!--********** inicio navbar bootstrap **********-->
+
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#opciones">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav id="opciones" class="encabezado__navegacion collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Turnos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./institucional.html">Institucional</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./staff.html">Staff</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./info.html">Info</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
         </nav>
+
+        <!--********** fin navbar bootstrap **********-->
+
     </header>
-    <main class="cuerpo">
-        <h1 class="cuerpo__titulo">Solicite su turno</h1>
-        <p class="cuerpo__texto1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores perspiciatis culpa, alias porro esse perferendis. Alias beatae blanditiis minima sed eaque similique, eos fugit illum quis omnis, in asperiores consequuntur.</p>
-        <div class="cuerpo__foto1" style="background-image: url(../Assets/Foto2.jpg);"> </div>
+    <h1 class="titulo animate__fadeInLeft">Solicite su turno</h1>
+    <main>
+        <div class="cuerpo">
+            <p class="cuerpo__texto1 animate__fadeInLeft">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolores perspiciatis culpa, alias porro esse perferendis. Alias beatae blanditiis minima sed eaque
+                similique, eos fugit illum quis omnis, in asperiores consequuntur.</p>
+            <div class="cuerpo__foto1 animate__fadeInRight" style="background-image: url(../Assets/generales/Foto2.jpg);"> </div>
+        </div>
     </main>
     <section>
-        <a href="#" class="cuerpo__boton">sección turnos</a>
+        <a href="#" class="cuerpo__boton">turnos</a>
     </section>
+    
+    <a class="subir_boton" href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <a class="whatsapp_boton" href="#">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
     <footer class="pie">
         <span class="pie__texto">Espacio Lupsa 2024 todos los derechos reservados</span>
         <span class="pie__redes">
-            <a href="""><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="""><i class=" fa-brands fa-x-twitter"></i></a>
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
         </span>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>
