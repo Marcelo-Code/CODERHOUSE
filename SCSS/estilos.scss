@@ -7,7 +7,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
-html{
+html {
     position: relative;
     min-height: 100%;
 }
@@ -241,7 +241,6 @@ section {
     text-decoration: none;
 }
 
-
 .botones_flotantes {
     color: white;
     font-size: 20px;
@@ -279,18 +278,24 @@ section {
 }
 
 @each $variable in cuerpo_,
-    whatsapp,
-    subir {
-            .#{$variable}_boton:hover {
-            @extend .boton_hover;
-        }
-
-            .#{$variable}_boton:active {
-            @extend .boton_active;
-        }
+whatsapp,
+subir {
+    .#{$variable}_boton:hover {
+        @extend .boton_hover;
     }
 
+    .#{$variable}_boton:active {
+        @extend .boton_active;
+    }
+}
+
 /*********** Elementos Footer ***********/
+
+footer {
+    position: relative;
+    top: 20vh;
+    height: 10vh;
+}
 
 .pie {
     display: flex;
@@ -305,6 +310,7 @@ section {
 
 .pie__redes {
     width: 40vw;
+    text-align: center;
 
     a {
         color: white;
@@ -321,7 +327,7 @@ section {
 
 /*********** Media Queries ***********/
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:780px) {
 
     .encabezado {
         grid-template-columns: 150px auto;
@@ -345,7 +351,7 @@ section {
     }
 
     .carousel-item img {
-        width: 300px;
+         width: 300px;
     }
 
     .pie__texto {
@@ -355,7 +361,7 @@ section {
     }
 
     .pie__redes {
-        width: 50vw;
+        width: 70vw;
     }
 }
 
@@ -386,11 +392,6 @@ section {
     .encabezado__texto_logo {
         font-size: 20px;
         line-height: 30px;
-    }
-
-    .pie {
-        position: absolute;
-        bottom: 0;
     }
 }
 
@@ -445,10 +446,6 @@ section {
             grid-column: #{$j}/#{$j+1};
             grid-row: #{$i}/#{$i+1};
         }
-    }
-    .pie {
-        position: absolute;
-        bottom: 0;
     }
 }
 
