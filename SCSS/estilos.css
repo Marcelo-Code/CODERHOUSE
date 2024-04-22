@@ -7,29 +7,6 @@
 }
 
 /********** Variables **********/
-/********** Extends **********/
-.whatsapp_boton, .subir_boton {
-  color: white;
-  font-size: 20px;
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  right: 40px;
-  border-radius: 50%;
-  text-align: center;
-  padding: 5px;
-}
-
-.subir_boton:hover, .whatsapp_boton:hover, .cuerpo__boton:hover {
-  box-shadow: inset 0 0 10px white;
-  color: white;
-}
-
-.subir_boton:active, .whatsapp_boton:active, .cuerpo__boton:active {
-  color: white;
-  box-shadow: inset 0 0 0;
-}
-
 /********** NavBar Bootstrap **********/
 .encabezado__texto {
   font-weight: bold;
@@ -168,7 +145,6 @@ body {
 
 .cuerpo {
   margin: 40px;
-  padding-bottom: 200px;
 }
 
 .titulo {
@@ -210,7 +186,7 @@ body {
 }
 
 .lista {
-  margin-top: 100px;
+  margin-top: 0px;
   text-align: center;
   line-height: 25px;
   height: 100px;
@@ -239,6 +215,18 @@ section {
   text-decoration: none;
 }
 
+.botones_flotantes, .whatsapp_boton, .subir_boton {
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 40px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 5px;
+}
+
 .subir_boton {
   background-image: radial-gradient(circle, #c9c9cf, #a8a8af, #888890, #696972, #4c4c56);
   bottom: 60px;
@@ -251,6 +239,16 @@ section {
   box-shadow: 0 0 5px 5px rgb(90, 133, 79);
 }
 
+.boton_hover, .subir_boton:hover, .whatsapp_boton:hover, .cuerpo__boton:hover {
+  box-shadow: inset 0 0 10px white;
+  color: white;
+}
+
+.boton_active, .subir_boton:active, .whatsapp_boton:active, .cuerpo__boton:active {
+  color: white;
+  box-shadow: inset 0 0 0;
+}
+
 /*********** Elementos Footer ***********/
 .pie {
   display: flex;
@@ -260,7 +258,7 @@ section {
   height: auto;
   padding-top: 16px;
   padding-left: 16px;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 .pie__redes {

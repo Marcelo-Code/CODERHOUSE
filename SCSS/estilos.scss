@@ -14,30 +14,6 @@ $sombra_interna_boton_2: inset 0 0 10px white;
 $sombra_interna_boton_3: inset 0 0 0;
 $relleno_degradado: linear-gradient(to top, #9f99a3, #89858f, #74717c, #605e69, #4c4c56);
 
-/********** Extends **********/
-
-%botones_flotantes {
-    color: white;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    right: 40px;
-    border-radius: 50%;
-    text-align: center;
-    padding: 5px;
-}
-
-%boton_hover {
-    box-shadow: $sombra_interna_boton_2;
-    color: white;
-}
-
-%boton_active {
-    color: white;
-    box-shadow: $sombra_interna_boton_3;
-}
-
 /********** NavBar Bootstrap **********/
 
 .encabezado__texto {
@@ -188,7 +164,6 @@ body {
 
 .cuerpo {
     margin: 40px;
-    padding-bottom: 200px;
 }
 
 .titulo {
@@ -230,7 +205,7 @@ body {
 }
 
 .lista {
-    margin-top: 100px;
+    margin-top: 0px;
     text-align: center;
     line-height: 25px;
     height: 100px;
@@ -260,31 +235,54 @@ section {
     text-decoration: none;
 }
 
+
+.botones_flotantes {
+    color: white;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px;
+}
+
 .subir_boton {
-    @extend %botones_flotantes;
+    @extend .botones_flotantes;
     background-image: radial-gradient(circle, #c9c9cf, #a8a8af, #888890, #696972, #4c4c56);
     bottom: 60px;
     box-shadow: 0 0 5px 5px grey;
 }
 
 .whatsapp_boton {
-    @extend %botones_flotantes;
+    @extend .botones_flotantes;
     background-image: radial-gradient(circle, rgba(63, 251, 186, 1) 0%, rgba(70, 252, 103, 1) 100%);
     bottom: 120px;
     box-shadow: 0 0 5px 5px rgb(90, 133, 79);
 }
 
-@each $variable in cuerpo_,
-whatsapp,
-subir {
-    .#{$variable}_boton:hover {
-        @extend %boton_hover;
-    }
-
-    .#{$variable}_boton:active {
-        @extend %boton_active;
-    }
+.boton_hover {
+    box-shadow: $sombra_interna_boton_2;
+    color: white;
 }
+
+.boton_active {
+    color: white;
+    box-shadow: $sombra_interna_boton_3;
+}
+
+@each $variable in cuerpo_,
+    whatsapp,
+    subir {
+            .#{$variable}_boton:hover {
+            @extend .boton_hover;
+        }
+
+            .#{$variable}_boton:active {
+            @extend .boton_active;
+        }
+    }
 
 /*********** Elementos Footer ***********/
 
@@ -296,7 +294,7 @@ subir {
     height: auto;
     padding-top: 16px;
     padding-left: 16px;
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .pie__redes {
