@@ -175,7 +175,9 @@ body {
 
 .cuerpo__foto1,
 .cuerpo__foto2 {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
   margin: auto;
   width: 300px;
   height: 300px;
@@ -183,9 +185,11 @@ body {
   background-size: cover;
   padding: 30px;
   border-radius: 30px;
+  margin-bottom: 100px;
 }
 .cuerpo__foto1 iframe,
 .cuerpo__foto2 iframe {
+  margin: 20px;
   width: 300px;
   height: 300px;
   border-radius: 20px;
@@ -290,7 +294,50 @@ footer {
 }
 
 /*********** Media Queries ***********/
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 360px) {
+  .encabezado__texto_logo {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .encabezado {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .encabezado__logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100px;
+    max-height: auto;
+  }
+  .titulo {
+    font-size: 15px;
+  }
+  .carousel-item img {
+    width: 250px;
+  }
+  .cuerpo__foto1,
+  .cuerpo__foto2 {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 30px;
+  }
+  .cuerpo__foto1 iframe,
+  .cuerpo__foto2 iframe {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+  }
+  .pie__texto {
+    font-size: 15px;
+    width: 50vw;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 768px) {
   .encabezado {
     grid-template-columns: 150px auto;
     grid-template-rows: auto auto;
