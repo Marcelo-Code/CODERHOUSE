@@ -97,7 +97,8 @@ html {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.encabezado__logo :hover {
+
+.encabezado__logo:hover {
   filter: opacity(0.5);
   transition-duration: 0.5s;
 }
@@ -145,7 +146,8 @@ html {
 /*********** Elementos Cuerpo ***********/
 body {
   background-image: url(../Assets/fondo.jpg);
-  background-size: cover;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 .cuerpo {
